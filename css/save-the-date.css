@@ -18,7 +18,8 @@
   font-family: "Wedding Script", cursive;
   font-weight: 400;
   font-size: clamp(3rem, 9vw, 6.5rem);
-  margin: 10px;
+  margin-top: 10px;
+  overflow: visible;
 }
 
 .hero__names {
@@ -231,4 +232,8 @@
   .info__figure {
     order: -1;
   }
+}
+
+@media (max-width: 600px) {
+  .hero__script { font-size: clamp(2.4rem, 13vw, 4rem); }
 }
