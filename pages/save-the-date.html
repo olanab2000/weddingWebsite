@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas &amp; Olivia — Save Our Date</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/save-the-date.css">
+</head>
+<body class="std">
+
+  <header class="hero">
+    <h1 class="hero__script">Save our date</h1>
+    <p class="hero__names">Nicholas &amp; Olivia</p>
+
+    <img src="../images/watercolorElandskloof.png" alt="Watercolour illustration of the gates at Elandskloof Farm" class="hero__art">
+
+    <p class="hero__date">
+      <time datetime="2027-12-28">28 December 2027</time>
+    </p>
+    <p class="hero__follow">Formal invitation to follow</p>
+    <p class="hero__place">Elandskloof Farm, Cape Town, South Africa</p>
+
+    <a class="btn" href="../ics/olivia-nicholas.ics" download>Add to calendar</a>
+</header>
+
+  <section class="info">
+    <div class="info__text">
+      <h2 class="info__script">Information</h2>
+
+      <p>We are so excited to share our dates, but we also know that December
+         is a busy time. If you already know you won't be able to make it,
+         please let us know! Please fill out your name and email so we can
+         send the formal invitation later.</p>
+
+      <p>For any questions, please contact us at:<br>
+         <a href="mailto:olivianicsimmons@gmail.com">olivianicsimmons@gmail.com</a></p>
+
+<form class="rsvp" id="rsvpForm" name="rsvp" method="POST"
+    data-netlify="true" netlify-honeypot="bot-field">
+
+  <input type="hidden" name="form-name" value="rsvp">
+
+  <p class="hidden-field">
+    <label>Don't fill this out: <input name="bot-field"></label>
+  </p>
+
+  <label class="rsvp__label" for="name">Your name</label>
+  <input class="rsvp__input" type="text" id="name" name="name" autocomplete="name" required>
+
+  <label class="rsvp__label" for="email">Your email</label>
+  <input class="rsvp__input" type="email" id="email" name="email" autocomplete="email" required>
+
+  <button class="btn" type="submit">Submit</button>
+
+  <p class="rsvp__status" id="rsvpStatus" role="status" aria-live="polite"></p>
+</form>
+
+    <figure class="info__figure">
+      <img src="../images/NicOlivia.jpg" alt="Olivia and Nicholas at Elandskloof Farm">
+      <figcaption>We hope you can join us!!</figcaption>
+    </figure>
+  </section>
+
+  <script src="../js/reveal.js"></script>
+  <script src="../js/rsvp.js"></script>
+</body>
+</html>
