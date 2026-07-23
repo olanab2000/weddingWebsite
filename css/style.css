@@ -18,7 +18,7 @@
 }
 
 :root {
-  --paper: #f7f0e1;
+  --paper: white;
   --ink: #0d2261;
   --envelope-max: 1100px;
 }
@@ -32,7 +32,7 @@ html, body {
 }
 
 body {
-  background: var(--paper);
+  background: white;
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
   -webkit-font-smoothing: antialiased;
