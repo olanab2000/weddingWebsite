@@ -87,11 +87,14 @@
 }
 
 .info__script {
+  display: block;
   font-family: "Wedding Script", cursive;
   font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 5rem);
   line-height: 1;
   margin: 0 0 0.8em;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .info__text p {
@@ -213,6 +216,10 @@
   pointer-events: none;
 }
 
+#Add-to-Calender-btn{
+    margin-bottom: 100spx;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .std .hero > *,
   .reveal {
@@ -232,8 +239,23 @@
   .info__figure {
     order: -1;
   }
+  .bread-text{
+    text-align: center;
+    }
+
+  .info__text p {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rsvp {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 @media (max-width: 600px) {
   .hero__script { font-size: clamp(2.4rem, 13vw, 4rem); }
+
 }

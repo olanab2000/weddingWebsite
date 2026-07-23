@@ -1,7 +1,7 @@
 document.documentElement.classList.add('js');
 
 const SPEEDS = {
-  '.line-greeting': 55,
+  '.line-greeting': 90,
   '.line-script': 90,
   '.line-cta': 35
 };
