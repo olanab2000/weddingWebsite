@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Wedding Script";
+  src: url("../fonts/slight.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.line-script {
+  font-family: "Wedding Script", cursive;
+  font-feature-settings: "swsh" 1, "salt" 1;
+}
+
+:root {
+  --paper: #f7f0e1;
+  --ink: #14161c;
+  --envelope-max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.stage {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 4vmin;
+}
+
+/* Envelope wrapper: image sets the size, text is positioned over it */
+.envelope {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: var(--envelope-max);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s ease;
+}
+
+.envelope:hover,
+.envelope:focus-visible {
+  transform: translateY(-4px);
+}
+
+.envelope:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 8px;
+}
+
+.envelope__art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Text block sits centred over the envelope.
+   Percentages keep it locked to the artwork at any screen size. */
+.envelope__text {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  text-align: center;
+}
+
+.line-greeting {
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(0.7rem, 1.7vw, 1.5rem);
+  letter-spacing: 0.08em;
+}
+
+
+.line-cta {
+  display: inline-block;
+  margin-top: 0.6em;
+  font-size: clamp(0.6rem, 1.3vw, 1.1rem);
+  font-style: italic;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2em;
+}
+
+/* --- Typing animation --- */
+
+/* Hide text until JS starts, but only if JS is running */
+.js .line-greeting,
+.js .line-script,
+.js .line-cta {
+  visibility: hidden;
+}
+
+.js .is-typing,
+.js .is-done {
+  visibility: visible;
+}
+
+.is-typing::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  margin-left: 0.06em;
+  background: currentColor;
+  vertical-align: baseline;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Respect users who don't want motion */
+@media (prefers-reduced-motion: reduce) {
+  .js .line-greeting,
+  .js .line-script,
+  .js .line-cta {
+    visibility: visible;
+  }
+  .envelope { transition: none; }
+  .is-typing::after { display: none; }
+}
