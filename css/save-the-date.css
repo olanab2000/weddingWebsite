@@ -217,7 +217,7 @@
 }
 
 #Add-to-Calender-btn{
-    margin-bottom: 100spx;
+    margin-bottom: 100px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -236,9 +236,6 @@
     gap: 3rem;
   }
 
-  .info__figure {
-    order: -1;
-  }
   .bread-text{
     text-align: center;
     }
@@ -252,10 +249,8 @@
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 @media (max-width: 600px) {
   .hero__script { font-size: clamp(2.4rem, 13vw, 4rem); }
-
 }
