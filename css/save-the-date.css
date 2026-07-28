@@ -95,6 +95,7 @@
   margin: 0 0 0.8em;
   text-align: center;
   margin-top: 1em;
+  grid-column: 1 / -1;
 }
 
 .info__text p {
@@ -107,6 +108,11 @@
 
 .info__text a {
   color: inherit;
+}
+
+.contact_form{
+    text-align: center;
+
 }
 
 .info__figure {
